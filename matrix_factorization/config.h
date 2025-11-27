@@ -22,7 +22,7 @@ namespace config {
             // Current iteration count
             int cur_iterations = 0;
             // Total iteration count
-            int total_iterations = 5000;
+            int total_iterations = 10000;
             // Number of latent factors to use
             int n_factors = 50;
             // The learning rate for SGD
@@ -42,7 +42,7 @@ namespace config {
             // The number of threads in a block
             int n_threads = 32; // Must be 2^0 to 2^9
             // The number of iterations before calculating loss 
-            int check_error = 500;
+            int check_error = 2000;
             // The number of times loss can stay constant or increase
             // before triggering a learning rate decay
             float patience = 2;
