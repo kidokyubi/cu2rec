@@ -45,7 +45,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Trains a Surprise SVD model")
     parser.add_argument('ratings_path', type=str, help="the ratings file")
     parser.add_argument('-l', '--learning_rate', type=float, default=0.0025, help="the learning rate")
-    parser.add_argument('-r', '--regularization_rate', type=float, default=0.08, help="the regularization rate")
+    parser.add_argument('-r', '--regularization_rate', type=float, default=0.05, help="the regularization rate")
     parser.add_argument('-n', '--num_iterations', type=int, default=10000, help="the number of cu2rec iterations")
     parser.add_argument('-f', '--factors', type=int, default=300, help="the number of factors")
     args = parser.parse_args()
