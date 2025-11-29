@@ -23,7 +23,7 @@ def convert_to_epochs(ratings, iterations=10000):
     return ceil(U * iterations / R)
 
 
-def train_svd(trainset, testset, lr_all=0.01, reg_all=0.02, n_epochs=10, n_factors=300):
+def train_svd(trainset, testset, lr_all=0.05, reg_all=0.05, n_epochs=10, n_factors=300):
     start = timer()
     algo = SVD(lr_all=lr_all, reg_all=reg_all, n_epochs=n_epochs, n_factors=n_factors)
     algo.fit(trainset)
@@ -44,8 +44,8 @@ def train_full(data, algo):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Trains a Surprise SVD model")
     parser.add_argument('ratings_path', type=str, help="the ratings file")
-    parser.add_argument('-l', '--learning_rate', type=float, default=0.02, help="the learning rate")
-    parser.add_argument('-r', '--regularization_rate', type=float, default=0.07, help="the regularization rate")
+    parser.add_argument('-l', '--learning_rate', type=float, default=0.01, help="the learning rate")
+    parser.add_argument('-r', '--regularization_rate', type=float, default=0.05, help="the regularization rate")
     parser.add_argument('-n', '--num_iterations', type=int, default=10000, help="the number of cu2rec iterations")
     parser.add_argument('-f', '--factors', type=int, default=300, help="the number of factors")
     args = parser.parse_args()
