@@ -30,13 +30,13 @@ namespace config {
             // The seed for the random number generator
             int seed = 42;
             // The regularization parameter for the user matrix
-            float P_reg = 0.02;
+            float P_reg = 0.05;
             // The regularization parameter for the item matrix
-            float Q_reg = 0.02;
+            float Q_reg = 0.05;
             // The regularization parameter for user biases
-            float user_bias_reg = 0.02;
+            float user_bias_reg = 0.05;
             // The regularization parameter for item biases
-            float item_bias_reg = 0.02;
+            float item_bias_reg = 0.05;
             // Whether we're doing full training or partial fit
             bool is_train = true;
             // The number of threads in a block
